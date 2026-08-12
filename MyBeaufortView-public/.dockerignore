@@ -1,0 +1,10 @@
+.git
+.github
+target
+.idea
+.vscode
+.metadata
+.metadata_current
+.env
+*.log
+README.md
