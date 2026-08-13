@@ -8,25 +8,25 @@ The backend provides authentication, photography feeds, location-based discovery
 
 ## Project Highlights
 
-* Java 21 with Spring Boot 3.5
-* Stateless JWT authentication using Spring Security
-* Role-based and resource-level authorization
-* Layered Controller → Service → Repository architecture
-* DTO-based response models for public-facing resources
-* PostgreSQL persistence with Spring Data JPA
-* Flyway-managed database migrations
-* Paginated photography feeds and collections
-* Location-based photography discovery
-* Search, image tags, and similar-post discovery
-* Idempotent like/unlike interactions
-* AWS S3 presigned upload workflow
-* Thumbnail and background media-processing support
-* OpenAI-backed image-tagging integration
-* Server-Sent Events (SSE) for real-time notifications
-* Photographer commission request workflow
-* Spring Boot Actuator and Prometheus metrics
-* Unit and integration testing with JUnit, MockMvc, and Testcontainers
-* Separate Maven Surefire and Failsafe test phases
+- Java 21 with Spring Boot 3.5
+- Stateless JWT authentication using Spring Security
+- Role-based and resource-level authorization
+- Layered Controller → Service → Repository architecture
+- DTO-based response models for public-facing resources
+- PostgreSQL persistence with Spring Data JPA
+- Flyway-managed database migrations
+- Paginated photography feeds and collections
+- Location-based photography discovery
+- Search, image tags, and similar-post discovery
+- Idempotent like/unlike interactions
+- AWS S3 presigned upload workflow
+- Thumbnail and background media-processing support
+- OpenAI-backed image-tagging integration
+- Server-Sent Events (SSE) for real-time notifications
+- Photographer commission request workflow
+- Spring Boot Actuator and Prometheus metrics
+- Unit and integration testing with JUnit, MockMvc, and Testcontainers
+- Separate Maven Surefire and Failsafe test phases
 
 ## Project Vision
 
@@ -44,15 +44,15 @@ Guests can browse publicly available content without creating an account.
 
 Public functionality includes:
 
-* Browsing photography posts
-* Viewing individual posts
-* Exploring Beaufort locations
-* Viewing location-based feeds
-* Searching photography
-* Viewing public user profiles
-* Viewing public user posts
-* Browsing public collections
-* Viewing post like counts
+- Browsing photography posts
+- Viewing individual posts
+- Exploring Beaufort locations
+- Viewing location-based feeds
+- Searching photography
+- Viewing public user profiles
+- Viewing public user posts
+- Browsing public collections
+- Viewing post like counts
 
 ### Privileged User
 
@@ -60,13 +60,13 @@ Registered users with the `PRIVILEGED_USER` role can interact with the platform.
 
 Authenticated functionality includes:
 
-* Creating and managing posts
-* Liking and unliking posts
-* Managing a profile
-* Creating and managing collections
-* Uploading images
-* Receiving notifications
-* Sending and responding to commission requests
+- Creating and managing posts
+- Liking and unliking posts
+- Managing a profile
+- Creating and managing collections
+- Uploading images
+- Receiving notifications
+- Sending and responding to commission requests
 
 ### Admin
 
@@ -82,15 +82,15 @@ Users can create, browse, edit, and delete photography posts.
 
 Post responses include information such as:
 
-* Description
-* Original image URL
-* Thumbnail URL
-* Creation timestamp
-* Author information
-* Beaufort location metadata
-* Like count
-* Current-user like state
-* Image tags
+- Description
+- Original image URL
+- Thumbnail URL
+- Creation timestamp
+- Author information
+- Beaufort location metadata
+- Like count
+- Current-user like state
+- Image tags
 
 The primary feed uses pagination and defaults to newest-first ordering.
 
@@ -100,11 +100,11 @@ Photography can be browsed by Beaufort-area location.
 
 Location responses include:
 
-* Location name
-* URL-friendly slug
-* Latitude and longitude
-* Description
-* Number of associated posts
+- Location name
+- URL-friendly slug
+- Latitude and longitude
+- Description
+- Number of associated posts
 
 Each location also exposes a paginated photography feed.
 
@@ -120,9 +120,9 @@ Authenticated users can like and unlike posts.
 
 The API also provides:
 
-* Public like counts
-* Personalized liked/not-liked state
-* Idempotent interaction behavior
+- Public like counts
+- Personalized liked/not-liked state
+- Idempotent interaction behavior
 
 ### Collections
 
@@ -130,28 +130,28 @@ Users can organize photography into collections.
 
 Collections support:
 
-* Public collection browsing
-* Paginated collection listings
-* User-specific collection listings
-* Collection visibility
-* Cover images
-* Post counts
-* Adding posts to collections
-* Removing posts from collections
-* Ownership-aware update and delete operations
+- Public collection browsing
+- Paginated collection listings
+- User-specific collection listings
+- Collection visibility
+- Cover images
+- Post counts
+- Adding posts to collections
+- Removing posts from collections
+- Ownership-aware update and delete operations
 
 ### User Profiles
 
 Public user profiles expose photography-oriented information including:
 
-* Username
-* Display name
-* Biography
-* Profile image
-* Account creation date
-* Post count
-* Collection count
-* Share path
+- Username
+- Display name
+- Biography
+- Profile image
+- Account creation date
+- Post count
+- Collection count
+- Share path
 
 Authenticated users can update their own profile.
 
@@ -167,11 +167,11 @@ The application tracks background media-processing jobs associated with posts.
 
 Media status responses expose:
 
-* Job ID
-* Job type
-* Processing status
-* Attempt count
-* Error information when applicable
+- Job ID
+- Job type
+- Processing status
+- Attempt count
+- Error information when applicable
 
 The backend also includes thumbnail-processing and image-tagging infrastructure.
 
@@ -179,11 +179,11 @@ The backend also includes thumbnail-processing and image-tagging infrastructure.
 
 Authenticated users have access to an application notification system supporting:
 
-* Notification history
-* Unread counts
-* Mark-as-read operations
-* Notification deletion
-* Real-time delivery using Server-Sent Events
+- Notification history
+- Unread counts
+- Mark-as-read operations
+- Notification deletion
+- Real-time delivery using Server-Sent Events
 
 ### Commission Requests
 
@@ -191,12 +191,12 @@ Authenticated users can submit photography commission requests.
 
 The workflow supports:
 
-* Creating requests
-* Viewing sent requests
-* Viewing received requests
-* Accepting requests
-* Declining requests
-* Associating requests with a post
+- Creating requests
+- Viewing sent requests
+- Viewing received requests
+- Accepting requests
+- Declining requests
+- Associating requests with a post
 
 Commission responses track requester and photographer information, status, message content, related post, and timestamps.
 
@@ -204,41 +204,41 @@ Commission responses track requester and photographer information, status, messa
 
 ### Backend
 
-* Java 21
-* Spring Boot 3.5.4
-* Spring MVC
-* Spring Data JPA
-* Spring Security
-* Jakarta Bean Validation
-* JWT authentication using JJWT
-* PostgreSQL
-* Flyway
+- Java 21
+- Spring Boot 3.5.4
+- Spring MVC
+- Spring Data JPA
+- Spring Security
+- Jakarta Bean Validation
+- JWT authentication using JJWT
+- PostgreSQL
+- Flyway
 
 ### Storage and Media
 
-* AWS SDK for Java
-* Amazon S3 presigned uploads
-* Thumbnailator
-* Background media jobs
-* OpenAI image-tagging integration
+- AWS SDK for Java
+- Amazon S3 presigned uploads
+- Thumbnailator
+- Background media jobs
+- OpenAI image-tagging integration
 
 ### Observability
 
-* Spring Boot Actuator
-* Micrometer
-* Prometheus registry
+- Spring Boot Actuator
+- Micrometer
+- Prometheus registry
 
 ### Testing
 
-* JUnit
-* Spring Boot Test
-* MockMvc
-* Spring Security Test
-* H2 for selected tests
-* Testcontainers
-* PostgreSQL Testcontainers
-* Maven Surefire
-* Maven Failsafe
+- JUnit
+- Spring Boot Test
+- MockMvc
+- Spring Security Test
+- H2 for selected tests
+- Testcontainers
+- PostgreSQL Testcontainers
+- Maven Surefire
+- Maven Failsafe
 
 ## Architecture
 
@@ -501,38 +501,38 @@ Spring method security is enabled for fine-grained authorization.
 
 The application uses:
 
-* `PRIVILEGED_USER`
-* `ADMIN`
+- `PRIVILEGED_USER`
+- `ADMIN`
 
 ### Public Access
 
 Public functionality includes:
 
-* Authentication registration and login
-* Post reads
-* Post like counts
-* Public user profiles
-* Public user posts
-* Public collection reads
-* User collection listings
-* Location browsing
-* Location feeds
-* Search
-* Media-processing status
-* Actuator health
-* Actuator application information
+- Authentication registration and login
+- Post reads
+- Post like counts
+- Public user profiles
+- Public user posts
+- Public collection reads
+- User collection listings
+- Location browsing
+- Location feeds
+- Search
+- Media-processing status
+- Actuator health
+- Actuator application information
 
 ### Authenticated Access
 
 Authentication is required for functionality including:
 
-* Like and unlike operations
-* Personalized like state
-* Profile updates
-* Collection modifications
-* S3 presigned upload requests
-* Notifications
-* Commission requests
+- Like and unlike operations
+- Personalized like state
+- Profile updates
+- Collection modifications
+- S3 presigned upload requests
+- Notifications
+- Commission requests
 
 Post creation, update, and deletion additionally require the appropriate application role.
 
@@ -549,11 +549,11 @@ prometheus
 
 Access rules are:
 
-* `/actuator/health/**` — public
-* `/actuator/info` — public
-* `/actuator/prometheus` — `ADMIN`
-* `/actuator/metrics/**` — `ADMIN`
-* Any other actuator route — `ADMIN`
+- `/actuator/health/**` — public
+- `/actuator/info` — public
+- `/actuator/prometheus` — `ADMIN`
+- `/actuator/metrics/**` — `ADMIN`
+- Any other actuator route — `ADMIN`
 
 Health details are configured not to expose internal information publicly.
 
@@ -577,17 +577,17 @@ src/main/resources/db/migration
 
 The schema includes support for:
 
-* Users
-* User profiles
-* Posts
-* Locations
-* Post tags
-* Collections
-* Collection entries
-* Likes
-* Media jobs
-* Notifications
-* Commission requests
+- Users
+- User profiles
+- Posts
+- Locations
+- Post tags
+- Collections
+- Collection entries
+- Likes
+- Media jobs
+- Notifications
+- Commission requests
 
 Development-only migration data is maintained separately from the main production migration path.
 
@@ -595,26 +595,30 @@ Development-only migration data is maintained separately from the main productio
 
 Runtime secrets and deployment-specific configuration are supplied through environment variables rather than committed application credentials.
 
-### Required
+Use `.env.example` as a reference for local configuration. The real `.env` file should remain outside version control.
+
+### Core Configuration
 
 ```text
 DATABASE_URL
 DATABASE_USERNAME
 DATABASE_PASSWORD
 JWT_SECRET
-AWS_S3_BUCKET
 OPENAI_API_KEY
 ```
 
-`JWT_SECRET` must be a Base64-encoded secret of at least 256 bits.
+`JWT_SECRET` must be a Base64-encoded secret representing at least 256 bits.
 
-### Optional / Defaulted
+### AWS S3 Configuration
+
+S3 integration is disabled by default.
+
+When S3 is enabled, configure:
 
 ```text
+AWS_S3_BUCKET
 AWS_S3_REGION
 AWS_S3_ENABLED
-OPENAI_MODEL
-OPENAI_BASE_URL
 ```
 
 Current defaults include:
@@ -622,19 +626,40 @@ Current defaults include:
 ```text
 AWS_S3_REGION=us-east-1
 AWS_S3_ENABLED=false
+```
+
+### OpenAI Configuration
+
+Image-tagging integration uses:
+
+```text
+OPENAI_API_KEY
+OPENAI_MODEL
+OPENAI_BASE_URL
+```
+
+Current defaults for the optional model and base URL settings are:
+
+```text
 OPENAI_MODEL=gpt-4.1-mini
 OPENAI_BASE_URL=https://api.openai.com/v1
 ```
 
-Do not commit real passwords, JWT secrets, AWS credentials, or API keys.
+Do not commit real database passwords, JWT secrets, AWS credentials, API keys, or the local `.env` file.
 
 ## Running Locally
 
 ### Requirements
 
-* Java 21
-* Docker
-* Maven, or the included Maven Wrapper
+- Java 21
+- Docker
+- Maven, or the included Maven Wrapper
+
+### Configure the Environment
+
+Create a local `.env` using `.env.example` as a reference and replace placeholder values with your local configuration.
+
+The `.env` file is intentionally excluded from version control.
 
 ### PostgreSQL with Docker Compose
 
@@ -674,19 +699,19 @@ The backend uses port `8080` by default.
 
 The repository includes:
 
-* `Dockerfile`
-* `docker-compose.yml`
-* `.dockerignore`
+- `Dockerfile`
+- `docker-compose.yml`
+- `.dockerignore`
 
 The Compose configuration defines PostgreSQL and backend services.
 
 S3 is disabled in the default Compose configuration.
 
-Deployment secrets should be provided through environment variables and must not be committed to the repository.
+Deployment secrets should be supplied through environment variables and must not be committed to the repository.
 
 ## Testing
 
-The Maven build separates regular tests from integration tests.
+The Maven build separates standard tests from integration tests.
 
 ### Unit / Standard Test Phase
 
@@ -757,8 +782,7 @@ They can be enabled in an appropriate development configuration when interactive
 
 The frontend is implemented separately using React and Vite:
 
-**MyBeaufortView Frontend:**
-https://github.com/Jon118170/MyBeaufortView_frontend
+[MyBeaufortView Frontend](https://github.com/Jon118170/MyBeaufortView_frontend)
 
 ## Repository Note
 
